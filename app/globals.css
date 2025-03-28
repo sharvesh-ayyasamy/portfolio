@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 94%;
+    --foreground: 210 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 15%;
+    --primary: 210 50% 30%;
+    --primary-foreground: 40 30% 94%;
+    --secondary: 30 40% 40%;
+    --secondary-foreground: 40 30% 94%;
+    --muted: 40 20% 85%;
+    --muted-foreground: 210 30% 30%;
+    --accent: 30 40% 40%;
+    --accent-foreground: 40 30% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 30% 94%;
+    --border: 40 20% 80%;
+    --input: 40 20% 80%;
+    --ring: 210 50% 30%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 50% 15%;
+    --foreground: 40 30% 94%;
+    --card: 210 50% 15%;
+    --card-foreground: 40 30% 94%;
+    --popover: 210 50% 15%;
+    --popover-foreground: 40 30% 94%;
+    --primary: 210 50% 30%;
+    --primary-foreground: 40 30% 94%;
+    --secondary: 30 40% 40%;
+    --secondary-foreground: 40 30% 94%;
+    --muted: 210 50% 20%;
+    --muted-foreground: 40 30% 85%;
+    --accent: 30 40% 40%;
+    --accent-foreground: 40 30% 94%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 30% 94%;
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 210 50% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-heading {
+  @apply bg-gradient-to-r from-timmerman-corporateGreen via-timmerman-green to-timmerman-greenLight bg-clip-text text-transparent;
+}
+
+.project-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-timmerman-green/20 hover:-translate-y-1;
+}
+
+.skill-progress .progress-bar {
+  @apply h-3 rounded-full bg-gradient-to-r from-timmerman-green via-timmerman-greenLight to-timmerman-blue shadow-md;
+}
+
+.skill-name {
+  @apply font-semibold text-white text-base tracking-wide;
+}
+
+.skill-percentage {
+  @apply text-timmerman-beige font-bold text-base;
+}
+
+.skill-description {
+  @apply text-sm text-white/90 italic pl-1 border-l-2 border-timmerman-green/50 ml-1;
+}
+
+.skill-category-title {
+  @apply text-2xl font-bold mb-6 text-white bg-gradient-to-r from-timmerman-beige to-white bg-clip-text text-transparent;
+}
+
+.skill-badge {
+  @apply bg-timmerman-green text-white font-medium shadow-sm;
+}
+
+.skill-badge-secondary {
+  @apply bg-timmerman-blue text-white font-medium shadow-sm;
+}
+
+.hero-gradient {
+  @apply bg-gradient-to-br from-timmerman-corporateGreen/20 via-timmerman-green/10 to-transparent;
+}
+
+.section-divider {
+  @apply h-1 w-20 mx-auto my-8 bg-gradient-to-r from-timmerman-corporateGreen to-timmerman-brown rounded-full;
+}
+
+.executive-card {
+  @apply border-timmerman-corporateGreen/20 shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.executive-button {
+  @apply bg-timmerman-corporateGreen hover:bg-timmerman-corporateGreenDark text-white transition-all duration-300;
+}
+
+.accent-button {
+  @apply bg-timmerman-brown hover:bg-timmerman-brownDark text-white transition-all duration-300;
+}
+
+.geometric-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(26, 77, 54, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.geometric-pattern-light {
+  background-image: radial-gradient(circle at 1px 1px, rgba(26, 77, 54, 0.08) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.timmerman-card {
+  @apply border-timmerman-corporateGreen/20 bg-white shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.timmerman-badge {
+  @apply bg-timmerman-green/20 text-timmerman-corporateGreen font-medium;
+}
+
+.timmerman-badge-accent {
+  @apply bg-timmerman-brown/20 text-timmerman-brownDark font-medium;
+}
+
+.green-section {
+  @apply bg-timmerman-green text-white;
+}
+
+.green-gradient {
+  @apply bg-gradient-to-r from-timmerman-corporateGreenDark via-timmerman-corporateGreen to-timmerman-green;
+}
+
+.green-button {
+  @apply bg-timmerman-green hover:bg-timmerman-greenDark text-white transition-all duration-300;
+}
+
+.timmerman-badge-green {
+  @apply bg-timmerman-green/20 text-white font-medium;
+}
+
+.dark-section {
+  @apply bg-timmerman-corporateGreen text-timmerman-offWhite;
+}
+
+.beige-section {
+  @apply bg-timmerman-beige/80 text-timmerman-corporateGreenDark;
+}
+
+.brown-section {
+  @apply bg-timmerman-brownLight/30 text-timmerman-corporateGreenDark;
+}
+
+.text-brightest {
+  @apply text-white;
+}
+
+.resume-button {
+  @apply bg-timmerman-corporateGreenDark hover:bg-timmerman-corporateGreen text-white border-timmerman-beige/50 border transition-all duration-300 shadow-md;
+}
+
+/* Add pattern background for skills section */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A4D36' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Add card styling for skills section */
+.skill-card {
+  @apply bg-gradient-to-br from-timmerman-corporateGreen to-timmerman-corporateGreenDark text-white border-none shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px];
+}
+
